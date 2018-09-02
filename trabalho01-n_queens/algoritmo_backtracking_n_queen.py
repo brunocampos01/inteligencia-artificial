@@ -1,4 +1,5 @@
-"""Trabalho 1 Problema das N-Rainhas
+"""
+Trabalho 1 Problema das N-Rainhas
 TIPO DE SOLUÇÃO: recursão com backtracking
 Alunos: Bruno Campos, Elisa de Mattos Rosá, Filipe Voges"""
 
@@ -12,7 +13,9 @@ class NRainhas:
 
     def solucao(self):
         """Função que retorna o numero de soluções encontradas"""
-        positions = [-1] * self.n_rainhas
+        positions = self.n_rainhas
+        # atribui positions a uma lista de inteiros e multipla para formar o tabuleiro
+        positions *= [self.n_rainhas]
         # print(type(positions))
         self.put_rainha(positions, 0)
         return print(f"Encontrado {self.n_solucoes} soluções.")
@@ -29,7 +32,6 @@ class NRainhas:
         else:
             # para todas as colunas tente colocar uma rainha
             for coluna in range(self.n_rainhas):
-                # Reject all invalid positions
                 if self.backtracking(positions, linha_alvo, coluna):
                     positions[linha_alvo] = coluna
                     self.put_rainha(positions, linha_alvo + 1)
@@ -38,10 +40,10 @@ class NRainhas:
     def backtracking(self, positions, linha_ocupada, coluna):
         """Verifique se uma determinada posição está sob ataque de qualquer uma das
          rainhas colocadas anteriormente (verifique a coluna e as posições diagonais)"""
-        for i in range(linha_ocupada):
-            if positions[i] == coluna or \
-                positions[i] - i == coluna - linha_ocupada or \
-                positions[i] + i == coluna + linha_ocupada:
+        for linha in range(linha_ocupada):
+            if positions[linha] == coluna or \
+                positions[linha] - linha == coluna - linha_ocupada or \
+                positions[linha] + linha == coluna + linha_ocupada:
                 return False
         return True
 
@@ -65,7 +67,7 @@ class NRainhas:
 
 
 def main():
-    NRainhas(4)
+    NRainhas(8)
 
 
 if __name__ == "__main__":
