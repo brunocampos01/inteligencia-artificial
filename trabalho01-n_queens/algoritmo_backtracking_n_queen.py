@@ -25,9 +25,10 @@ class NRainhas:
         """Insere uma rainha no linha_alvo verificando todos os N possíveis.
         Se um local válido é encontrado, a função chama a si mesma e insere uma rainha
          na próxima linha até que todas as N rainhas sejam colocadas na placa NxN."""
+        # se todas as linhas (n_rainhas) estão ocupadas, chama a funcao para imprimir o tabuleiro
         if linha_alvo == self.n_rainhas:
             self.imprime_tabuleiro(positions)
-            #self.imprime_posicao_linha(positions)  # mostra a linha que cada rainha foi inserida
+            #self.imprime_posicao_linha(positions)
             self.n_solucoes += 1
         else:
             # para todas as colunas tente colocar uma rainha
@@ -40,10 +41,10 @@ class NRainhas:
     def backtracking(self, positions, linha_ocupada, coluna):
         """Verifique se uma determinada posição está sob ataque de qualquer uma das
          rainhas colocadas anteriormente (verifique a coluna e as posições diagonais)"""
-        for linha in range(linha_ocupada):
-            if positions[linha] == coluna or \
-                positions[linha] - linha == coluna - linha_ocupada or \
-                positions[linha] + linha == coluna + linha_ocupada:
+        for i in range(linha_ocupada):
+            if positions[i] == coluna or \
+                positions[i] - i == coluna - linha_ocupada or \
+                positions[i] + i == coluna + linha_ocupada:
                 return False
         return True
 
