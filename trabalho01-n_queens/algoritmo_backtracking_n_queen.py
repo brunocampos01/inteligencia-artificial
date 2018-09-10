@@ -14,9 +14,10 @@ class NRainhas:
     def solucao(self):
         """Função que retorna o numero de soluções encontradas"""
         positions = self.n_rainhas
+        #print(type(positions))
         # atribui positions a uma lista de inteiros e multipla para formar o tabuleiro
         positions *= [self.n_rainhas]
-        # print(type(positions))
+        #print(type(positions))
         self.put_rainha(positions, 0)
         return print(f"Encontrado {self.n_solucoes} soluções.")
 
@@ -56,19 +57,20 @@ class NRainhas:
                     line += "Q "
                 else:
                     line += ". "
-            print(line)
-        print("\n")
+            #print(line)
+        #print("\n")
 
     def imprime_posicao_linha(self, positions):
         """função para verificar a posicao de cada rainha"""
         line = ""
         for i in range(self.n_rainhas):
             line += str(positions[i]) + " "
-        print(line)
+        #print(line)
 
 
 def main():
-    NRainhas(8)
+    NRainhas(20)
+    print('fim')
 
 
 if __name__ == "__main__":
