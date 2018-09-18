@@ -44,8 +44,8 @@ irmao(X,Y):-mae(Z,X),mae(Z,Y).
 namora(iris,rocky).
 
 cunhado(X,Z):-irmao(X,Y),namora(Y,Z).
-cunhado(Z,X):-irmao(X,Y),namora(Y,Z).
-% cunhado(rocky,Z). --perguntar professor
+cunhado(Z,X):-irmao(X,Y),namora(Y,Z),not(Y=X). % garantir a exclusão namorado
+% cunhado(rocky,Z).
 % cunhado(julia,Z).
 
 eh_sogro(A,C):-namora(B,C), progenitor(A,B).
