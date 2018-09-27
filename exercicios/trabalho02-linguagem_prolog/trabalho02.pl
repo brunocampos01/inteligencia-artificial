@@ -56,5 +56,4 @@ pais(P,Y):-pai(P,Y).
 pais(M,Y):-mae(M,Y).
 % pais(X,jose).
 
-% 4) Complemente o programa para permitir consultas 
-% sobre a pátria onde nasceram todos os descendentes de alguém.
+% 4) Complemente o programa para permitir consultas sobre a pátria onde nasceram todos os descendentes de alguém.
