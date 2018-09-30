@@ -46,8 +46,13 @@ irmao(X,Y):-mae(Z,X),mae(Z,Y).
 % add rocky
 namora(iris,rocky).
 
+<<<<<<< HEAD:exercicios/exercicios_prolog/trabalho02.pl
 cunhado(X,Z) :- irmao(X,Y), namora(Y,Z).
 cunhado(Z,X) :- irmao(X,Y), namora(Y,Z),not(Y=X).% garantir a exclusão namorado
+=======
+cunhado(X,Z):-irmao(X,Y),namora(Y,Z).
+cunhado(Z,X):-irmao(X,Y),namora(Y,Z),not(Y=X). % garantir a exclusão namorado
+>>>>>>> 8ee0cca811d3097a882642d85bf72118c17f4699:exercicios/trabalho02-linguagem_prolog/trabalho02.pl
 % cunhado(rocky,Z).
 % cunhado(julia,Z).
 
