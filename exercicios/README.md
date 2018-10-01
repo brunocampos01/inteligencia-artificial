@@ -30,7 +30,7 @@ f) FALSO. A árvore de busca será expandida com h(n) <= h*(n) onde h*(n) é o c
     * Busca em profundidade
     * Busca em profundidade limitada
     * Busca por aprofundamento iterativo
-    * Busca bidirecional
+    * Busca bidirecional (larg x larg, profun x profund, larg x profund, profund x larg)
 
 #### Informed Search
 * A*
