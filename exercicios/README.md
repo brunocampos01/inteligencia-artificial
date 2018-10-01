@@ -9,6 +9,17 @@ d. ( ) Os mecanismos de busca heurística sempre acham a solução ótima.<br/>
 e. ( ) Uma heurística admissível garante que o A* ache a solução ótima.<br/>
 f. ( ) Dadas duas heurísticas admissíveis h1 e h2 tal que h1 > h2. Usando h1 expandiremos mais nós na árvore de busca.
 
+---
+
+a) FALSO. Dependendo do nivel de profundidade a busca em profundidade pode nem encontrar a solucao.
+b) FALSO. A busca gulosa se dá pelo maior valor heurístico entre os passos alcançaveis, logo seus passos tem valor heuristico.
+c) FALSO. É possível utilizar estratégias de busca diferentes em cada direção de busca.
+d) FALSO. A busca gulosa é um mecanismo de busca heuristica que não garante a solução ótima.
+e) VERDADEIRO. A otimalidade de A* depende de h(n). A busca será ótima se h(n) for admissível e consistente.
+f) FALSO. A árvore de busca será expandida com h(n) <= h*(n) onde h*(n) é o custo real do caminho. Logo tende-se a ter menos nós quando o valor de h(n) sobe.
+
+---
+
 ### Algoritmos de busca:
 
 #### Uninformed Search
@@ -94,8 +105,8 @@ barco = [fazendeiro]
 ### 8. Realize o procedimento MINIMAX sobre a árvore que representa os ganhos de um jogo para MAX. Indique por quais nós o jogo vai passar se nenhum dos jogadores cometer nenhum erro e quanto MAX vai ganhar ao final do jogo.
 
 <img src="minimax.png" />
-H=7, G=0, F=7, E=7, D=5, C=5, B=3, A=5
-
+H=7, G=0, F=7, E=7, D=5, C=5, B=3, A=5<br/>
+Caminho percorrido: A-> C-> D-> (5)
 ### Resumo minimax
 - É um algoritmo que tem 2 jogadores:
  - MAX: busca vitória
