@@ -107,6 +107,8 @@ barco = [fazendeiro]
 <img src="minimax.png" />
 H=7, G=0, F=7, E=7, D=5, C=5, B=3, A=5<br/>
 Caminho percorrido: A-> C-> D-> (5)
+
+
 ### Resumo minimax
 - É um algoritmo que tem 2 jogadores:
  - MAX: busca vitória
