@@ -13,7 +13,8 @@ f. ( ) Dadas duas heurísticas admissíveis h1 e h2 tal que h1 > h2. Usando h1 e
 
 a) FALSO. Dependendo do nivel de profundidade a busca em profundidade pode nem encontrar a solucao.<br/>
 b) FALSO. A busca gulosa se dá pelo maior valor heurístico entre os passos alcançaveis, logo seus passos tem valor heuristico.<br/>
-c) FALSO. É possível utilizar estratégias de busca diferentes em cada direção de busca.<br/>
+c) FALSO. É possível utilizar estratégias de busca diferentes ou iguais em cada direção de busca.<br/>
+Ex) largura x largura, profundidade x profundidade, ...<br/>
 d) FALSO. A busca gulosa é um mecanismo de busca heuristica que não garante a solução ótima.<br/>
 e) VERDADEIRO. A otimalidade de A* depende de h(n). A busca será ótima se h(n) for admissível e consistente.<br/>
 f) FALSO. A árvore de busca será expandida com h(n) <= h*(n) onde h*(n) é o custo real do caminho. Logo tende-se a ter menos nós quando o valor de h(n) sobe.<br/>
