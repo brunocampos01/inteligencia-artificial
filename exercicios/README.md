@@ -9,7 +9,6 @@ d. ( ) Os mecanismos de busca heurística sempre acham a solução ótima.<br/>
 e. ( ) Uma heurística admissível garante que o A* ache a solução ótima.<br/>
 f. ( ) Dadas duas heurísticas admissíveis h1 e h2 tal que h1 > h2. Usando h1 expandiremos mais nós na árvore de busca.
 
----
 
 a) FALSO. Dependendo do nivel de profundidade a busca em profundidade pode nem encontrar a solucao.<br/>
 b) FALSO. A busca gulosa se dá pelo maior valor heurístico entre os passos alcançaveis, logo seus passos tem valor heuristico.<br/>
@@ -20,7 +19,7 @@ e) VERDADEIRO. A otimalidade de A* depende de h(n). A busca será ótima se h(n)
 f) FALSO. A árvore de busca será expandida com h(n) <= h*(n) onde h*(n) é o custo real do caminho. Logo tende-se a ter menos nós quando o valor de h(n) sobe.<br/>
 
 ---
-
+## RESUMO
 ### Algoritmos de busca:
 
 #### Uninformed Search
@@ -41,6 +40,7 @@ f) FALSO. A árvore de busca será expandida com h(n) <= h*(n) onde h*(n) é o c
 * Hill climbing
 * Simulated Annealing
 
+---
 ### 2. Defina com suas próprias palavras inteligência, inteligência artificial, conhecimento e raciocínio.
 
 **Inteligência:** é a capacidade de planejar, raciocinar e aprender utilizando o conhecimento.<br/>
@@ -51,16 +51,18 @@ f) FALSO. A árvore de busca será expandida com h(n) <= h*(n) onde h*(n) é o c
 - Indutivo: determinar regras
 - Abdutivo: determinar premissas
 
-
+---
 ### 3. Como a linguagem RDF pode ser classificada e descrita em termos de uma representação de conhecimento?
 
 RDF é uma linguagem para manipulação de documentos XML e que serve para chegar em níveis da web semântica. Pode ser descrita como um modelo de dados para representar meta-dados e descrever informações acessíveis por máquinas.
 
+---
 ### 4. Por que é difícil modelar o conhecimento de senso comum? Qual estratégia (representação de conhecimento, formas de aciocínio) você utilizaria?
 A ontologia pode ser definida como um conjunto de conceitos para descrever áreas de conhecimento.......
 
 A melhor estratégia seria modelar com uma ontologia genérica para construir teorias básicas do mundo que sejam aplicáveis a qualquer domínio.
 
+---
 ### 7. Represente de forma adequada a solução do problema abaixo :
 Um fazendeiro quer atravessar um rio junto com seu lobo de estimação, uma ovelha e um
 repolho bem grande. Tem a seu dispor um barco que por restrições de peso e tamanho só
@@ -105,14 +107,15 @@ Fila_margem_origem = []<br/>
 Fila_margem_chegada = [lobo, repolho, ovelha]<br/>
 barco = [fazendeiro]
 
+---
 ### 8. Realize o procedimento MINIMAX sobre a árvore que representa os ganhos de um jogo para MAX. Indique por quais nós o jogo vai passar se nenhum dos jogadores cometer nenhum erro e quanto MAX vai ganhar ao final do jogo.
 
 <img src="minimax.png" />
 H=7, G=0, F=7, E=7, D=5, C=5, B=3, A=5<br/>
 Caminho percorrido: A-> C-> D-> (5)
 
-
-### Resumo minimax
+---
+## Resumo minimax
 - É um algoritmo que tem 2 jogadores:
  - MAX: busca vitória
  - MIN: não quer que o MAX ganhe
@@ -161,7 +164,7 @@ Um sistema multiagente é uma rede fracamente acoplada. As principais caracteris
 
 
 
-## Resumo
+## Resumo sobre agentes
 * Um agente é alguma coisa que percebe e age no ambiente. A função de agente para um
 agente especifica a ação tomada por um agente em resposta a qualquer sequência de
 percepções.
