@@ -138,16 +138,26 @@ SE baseado em casos soluciona problemas por meio da utilização de casos anteri
 
 ---
 ### 12. Em um sistema multiagente, qual a diferença entre um modelo de cooperação emergente e um modelo comunicativo-cooperativo?
+Cooperacao emergente: agentes independentes seguem suas proprias metas e um observador externo tem a aparencia de uma cooperacao.
+Comunicativo-cooperativo: os agentes são construídos de modo a cooperar com outros agentes
 
 ---
-### 13. Um dos propósitos de um SMA é que ele seja capaz de resolver problemas além da capacidade individual de cada agente. Como isso pode ser alcançado? Explique utilizando conceitos de agentes e SMA
+### 13. Um dos propósitos de um SMA é que ele seja capaz de resolver problemas além da capacidade individual de cada agente. Como isso pode ser alcançado? Explique utilizando conceitos de agentes e SMA.
+Através da junção de solucionadores de problemas (agentes), podemos ter um sistema que trabalha em conjunto, sendo no caso um sistema multiagente que nada mais é do que uma rede fracamente acoplada de agente autônomos.
 
 ---
 ### 14. Quais as principais caractarísticas de um sistema multiagente que demandam a modelagem de um sistema de cooperação entre os agentes?
+Um sistema multiagente é uma rede fracamente acoplada. As principais caracteristicas que demandam a modelagem para este tipo de sistema são:
+- Cooperação;
+- Resolução de conflitos;
+- Negociação;
+- Comprometimentos;
+- Comunicação;
+- Interação.
 
 ---
 ### 15. Qual a importância de padrões para sistemas multiagente? Quais as estratégias da FIPA para promover a interoperabilidade em sistemas multiagente abertos?
-
+É importante para garantir a interoperabilidade entre sistemas. A FIPA estabelece padrões de softwares.
 
 
 
