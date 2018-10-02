@@ -57,7 +57,9 @@ f) FALSO. A árvore de busca será expandida com h(n) <= h*(n) onde h*(n) é o c
 RDF é uma linguagem para manipulação de documentos XML e que serve para chegar em níveis da web semântica. Pode ser descrita como um modelo de dados para representar meta-dados e descrever informações acessíveis por máquinas.
 
 ### 4. Por que é difícil modelar o conhecimento de senso comum? Qual estratégia (representação de conhecimento, formas de aciocínio) você utilizaria?
-...
+A ontologia pode ser definida como um conjunto de conceitos para descrever áreas de conhecimento.......
+
+A melhor estratégia seria modelar com uma ontologia genérica para construir teorias básicas do mundo que sejam aplicáveis a qualquer domínio.
 
 ### 7. Represente de forma adequada a solução do problema abaixo :
 Um fazendeiro quer atravessar um rio junto com seu lobo de estimação, uma ovelha e um
@@ -120,7 +122,36 @@ Caminho percorrido: A-> C-> D-> (5)
 - Começa pelo nodo esquerdo
 - vídeo que explica o funcionamento do algoritmo de minimax: https://youtu.be/ceU9sNFaSM8
 
-Resumo
+---
+### 9. Quais são os módulos que compõem um típico Sistema Especialista e qual a função de cada um deles?
+Um agente é composto por:
+- sensores para perceber o ambiente 
+- atuadores para realizar ações no ambiente
+
+---
+### 10. O que são Sistemas Especialistas ou Sistemas Baseados em Conhecimento? Quais são os módulos que compõem um típico Sistema Baseado em Conhecimento? e qual a diferença entre um sistema de raciocínio baseado em Regras, um sistema baseado em Modelos e um sistema baseado em Casos?
+São sistemas que empregam o conhecimento humano para resolver problemas que requerem um especialista.
+Vide questao 9
+SE baseado em regras trabalha com um conjunto de regras, dividindo o problema em subproblemas e testando as soluções para cada regra estabelecida.
+SE baseados em modelos tenta representar dispositivos e configurações de dispositivos em um nível casual ou funcional
+SE baseado em casos soluciona problemas por meio da utilização de casos anteriormente conhecidos.
+
+---
+### 12. Em um sistema multiagente, qual a diferença entre um modelo de cooperação emergente e um modelo comunicativo-cooperativo?
+
+---
+### 13. Um dos propósitos de um SMA é que ele seja capaz de resolver problemas além da capacidade individual de cada agente. Como isso pode ser alcançado? Explique utilizando conceitos de agentes e SMA
+
+---
+### 14. Quais as principais caractarísticas de um sistema multiagente que demandam a modelagem de um sistema de cooperação entre os agentes?
+
+---
+### 15. Qual a importância de padrões para sistemas multiagente? Quais as estratégias da FIPA para promover a interoperabilidade em sistemas multiagente abertos?
+
+
+
+
+## Resumo
 * Um agente é alguma coisa que percebe e age no ambiente. A função de agente para um
 agente especifica a ação tomada por um agente em resposta a qualquer sequência de
 percepções.
