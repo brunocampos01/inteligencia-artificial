@@ -12,7 +12,7 @@ Sequential Search
 
 **Disadvantages**:
  - high computational complex
- - big volunm data is slow
+ - big data is slow
  - inefficient
 '''
 

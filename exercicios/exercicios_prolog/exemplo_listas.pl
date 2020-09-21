@@ -2,36 +2,36 @@ INE5633-07238 (20182) - Sistemas Inteligentes
 Exemplos de programas PROLOG: Listas
 /* 01 =====================
 
-* Predicado: primeiro(L,P)
-* Definição: L é uma lista e P é o primeiro dado de L. */
-primeiro(P,[P|_]).
+* Predicado: first(L,P)
+* Definição: L é uma lista e P é o first dado de L. */
+first(P,[P|_]).
 
 
 /* 02 ====================
 * Predicado: segundo(L,S)
 * Definição: L é uma lista e S é o segundo dado de L.*/
-segundo(S,[_|Y]):- primeiro(S,Y).
+segundo(S,[_|Y]):- first(S,Y).
 
 
 /* 03 ===================
-* Predicado: ultimo(L,U)
+* Predicado: last(L,U)
 * Definição: L é uma lista e U é o último dado de L.*/
-ultimo(U,[U|[]]).
-ultimo(U,[_|Y]):- ultimo(U,Y).
+last(U,[U|[]]).
+last(U,[_|Y]):- last(U,Y).
 
 
 /* 04 ======================
-* Predicado: penultimo(L,P)
+* Predicado: penlast(L,P)
 * Definição: L é uma lista e P é o penúltimo de L.*/
-penultimo([P,_], P).
-penultimo([_,S,T|R],P) :- penultimo([S,T|R],P).
+penlast([P,_], P).
+penlast([_,S,T|R],P) :- penlast([S,T|R],P).
 
 
 /* 05 ====================
-* Predicado: tamanho(L,T)
+* Predicado: size(L,T)
 * Definição: L é uma lista e T é o número de dados de L.*/
-tamanho([], 0).
-tamanho([_|Y], N) :- tamanho(Y, N1), N is N1+1.
+size([], 0).
+size([_|Y], N) :- size(Y, N1), N is N1+1.
 
 
 /* 06 =====================
@@ -52,23 +52,23 @@ Pos is PosAuxiliar + 1.
 
 
 /* 08 ==============================
-* Predicado: removidoPrimeiro(L,LR)
-* Definição: L é uma lista e LR é uma lista com os mesmos dados de L, menos o primeiro.*/
-removidoPrimeiro([X|Y],Y).
+* Predicado: removidofirst(L,LR)
+* Definição: L é uma lista e LR é uma lista com os mesmos dados de L, menos o first.*/
+removidofirst([X|Y],Y).
 
 
 /* 09 ============================
-* Predicado: removidoUltimo(L,LR)
+* Predicado: removidolast(L,LR)
 * Definição: L é uma lista e LR é uma lista com os mesmos dados de L, menos o último.Primeira parte:*/
-removidoUltimo([X],[]).
-removidoUltimo([Y|T], [Y|T2]) :- removidoUltimo(T,T2).
+removidolast([X],[]).
+removidolast([Y|T], [Y|T2]) :- removidolast(T,T2).
 
 
 /* 10 =================================
-* Predicado: substituidoUltimo(D,L,LM)
+* Predicado: substituidolast(D,L,LM)
 * Definição: L é uma lista e LM é uma lista com os mesmos dados de L, com exceção do último que é D.*/
-substituidoUltimo(D,[U],[D]).
-substituidoUltimo(D,[A|T], [A|T2]) :- substituidoUltimo(D,T,T2).
+substituidolast(D,[U],[D]).
+substituidolast(D,[A|T], [A|T2]) :- substituidolast(D,T,T2).
 
 
 /* 11 ==================================
@@ -102,7 +102,7 @@ Pos is PosAuxiliar + 1.
 
 /* 15 =====================================
 * Predicado: substituidoDoInicio(D, L, LM)
-* Definição: D é um dado, L é uma lista e LM é a lista L com D no lugar do primeiro dado de L. */
+* Definição: D é um dado, L é uma lista e LM é a lista L com D no lugar do first dado de L. */
 substituidoDoInicio(D,[P|T],[D|T]).
 
 
