@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:untitled-ontology-8="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#domina -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#domina">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#judoca"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#golpe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#faixa_branca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#faixa_branca">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#domina"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#cochiguruma"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#domina"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#osotogari"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#judoca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#golpe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#golpe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#judoca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#judoca">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#domina"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#golpe"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#beltrano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#beltrano">
+        <domina rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#pegada_simples"/>
+        <domina rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#rolamento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#cochiguruma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#cochiguruma"/>
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#manezinho -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#manezinho">
+        <domina rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#cochiguruma"/>
+        <domina rdf:resource="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#osotogari"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#osotogari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#osotogari"/>
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#pegada_simples -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#pegada_simples"/>
+    
+
+
+    <!-- http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#rolamento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#rolamento"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#beltrano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#cochiguruma"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#manezinho"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#osotogari"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#pegada_simples"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/raphael/ontologies/2016/9/untitled-ontology-8#rolamento"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
