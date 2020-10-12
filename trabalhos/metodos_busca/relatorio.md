@@ -81,7 +81,7 @@ Escolhi a heurítica da distância de Manhattan(quadras urbanas). Conforme menci
 
 #### Referências
 - [1] vídeos das aulas de INE5633-07238 (20201) - Sistemas Inteligentes
-- [2] livro Inteligcia Artificial, Rusell e Norvig
+- [2] livro Inteligência Artificial, Rusell e Norvig
 - [3] https://github.com/JaneHJY/8_puzzle
 - [4] https://github.com/speix/8-puzzle-solver
 - [5] https://gist.github.com/flatline/838202
