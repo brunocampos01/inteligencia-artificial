@@ -151,7 +151,14 @@ Profundidade
 <img src="img/Depth-First-Search.gif" align="center" height=auto width=100%/>
 
 
+---
 
+## MinMax
+
+<img src="img/ex_minmax.png" align="center" height=auto width=100%/>
+
+
+problemas no minmax
 
 ---
 
