@@ -46,13 +46,6 @@ irmao(X,Y):-mae(Z,X),mae(Z,Y).
 % add rocky
 namora(iris,rocky).
 
-<<<<<<< HEAD:exercicios/exercicios_prolog/trabalho02.pl
-cunhado(X,Z) :- irmao(X,Y), namora(Y,Z).
-cunhado(Z,X) :- irmao(X,Y), namora(Y,Z),not(Y=X).% garantir a exclusão namorado
-=======
-cunhado(X,Z):-irmao(X,Y),namora(Y,Z).
-cunhado(Z,X):-irmao(X,Y),namora(Y,Z),not(Y=X). % garantir a exclusão namorado
->>>>>>> 8ee0cca811d3097a882642d85bf72118c17f4699:exercicios/trabalho02-linguagem_prolog/trabalho02.pl
 % cunhado(rocky,Z).
 % cunhado(julia,Z).
 
@@ -63,8 +56,3 @@ eh_sogro(A,C) :- namora(B,C), progenitor(A,B).
 pais(P,Y) :- pai(P,Y).
 pais(M,Y) :- mae(M,Y).
 % pais(X,jose).
-<<<<<<< HEAD:exercicios/exercicios_prolog/trabalho02.pl
-=======
-
-% 4) Complemente o programa para permitir consultas sobre a pátria onde nasceram todos os descendentes de alguém.
->>>>>>> 8f04c24c5b64d945bb69a597bcaa787171b55b97:exercicios/trabalho02-linguagem_prolog/trabalho02.pl
