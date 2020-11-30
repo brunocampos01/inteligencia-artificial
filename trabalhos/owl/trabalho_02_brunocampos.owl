@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#"
+     xml:base="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#extract_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#extract_with">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#load_with"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#database"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#implements">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#etl_tool"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#framework"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#load_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#load_with">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#database"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#need -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#need">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#framework"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#orchestra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#orchestra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#data_pipeline"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#etl_tool"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#runs_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#runs_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#database"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#environment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#data_pipeline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#data_pipeline">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#orchestra"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#etl_tool"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#database -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#database">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#extract_with"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#database"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#load_with"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#runs_on"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#environment"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#environment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#environment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#etl_tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#etl_tool">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#implements"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#framework"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#data_pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#framework -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#framework">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#need"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#etl_tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#load -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#load">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#framework"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_airflow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_airflow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#etl_tool"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_nifi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_cassandra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_cassandra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#database"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_hbase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_flink -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_flink">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#hadoop_mapreduce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_hbase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_hbase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_nifi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_nifi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#etl_tool"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_oozie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_oozie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_oozie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_storm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_storm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#framework"/>
+        <need rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#java"/>
+        <need rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#python"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#aws -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#aws">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#environment"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#azure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#azure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#azure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#hadoop_mapreduce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#hadoop_mapreduce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#framework"/>
+        <need rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#java"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#java -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#java">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#scala"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#local -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#local">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#environment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#postgres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#postgres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#database"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#python -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#python">
+        <rdf:type rdf:resource="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#scala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#scala"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#apache_storm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/campos/ontologies/2020/10/untitled-ontology-9#hadoop_mapreduce"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

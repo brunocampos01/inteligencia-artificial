@@ -1,0 +1,889 @@
+{
+  "version": 2,
+  "network": {
+    "id": "032252c5-e152-415f-9536-4047c7aea4f0",
+    "name": "doação de sangue",
+    "height": 700,
+    "width": 860,
+    "selectedNodes": [],
+    "beliefs": {},
+    "propertiesPanelVisible": true,
+    "kind": "BN",
+    "nodes": [
+      {
+        "id": "tipo_sangue_doador",
+        "states": [
+          "O+",
+          "O-",
+          "A+",
+          "A-",
+          "B+",
+          "B-",
+          "AB+",
+          "AB-"
+        ],
+        "parents": [],
+        "cpt": {
+          "O+": 0.36,
+          "O-": 0.09,
+          "A+": 0.34,
+          "A-": 0.08,
+          "AB+": 0.025,
+          "B+": 0.08,
+          "B-": 0.02,
+          "AB-": 0.005
+        }
+      },
+      {
+        "id": "receptor_O+",
+        "states": [
+          "Sucesso",
+          "Fracasso"
+        ],
+        "parents": [
+          "tipo_sangue_doador",
+          "apto_para_doar"
+        ],
+        "cpt": [
+          {
+            "when": {
+              "apto_para_doar": "Sim",
+              "tipo_sangue_doador": "O+"
+            },
+            "then": {
+              "Sucesso": 1,
+              "Fracasso": 0
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Sim",
+              "tipo_sangue_doador": "O-"
+            },
+            "then": {
+              "Sucesso": 1,
+              "Fracasso": 0
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Sim",
+              "tipo_sangue_doador": "A+"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Sim",
+              "tipo_sangue_doador": "A-"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Sim",
+              "tipo_sangue_doador": "B+"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Sim",
+              "tipo_sangue_doador": "B-"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Sim",
+              "tipo_sangue_doador": "AB+"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Sim",
+              "tipo_sangue_doador": "AB-"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Não",
+              "tipo_sangue_doador": "O+"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Não",
+              "tipo_sangue_doador": "O-"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Não",
+              "tipo_sangue_doador": "A+"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Não",
+              "tipo_sangue_doador": "A-"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Não",
+              "tipo_sangue_doador": "B+"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Não",
+              "tipo_sangue_doador": "B-"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Não",
+              "tipo_sangue_doador": "AB+"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          },
+          {
+            "when": {
+              "apto_para_doar": "Não",
+              "tipo_sangue_doador": "AB-"
+            },
+            "then": {
+              "Sucesso": 0,
+              "Fracasso": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "anemia",
+        "states": [
+          "Sim",
+          "Não"
+        ],
+        "parents": [],
+        "cpt": {
+          "Sim": 0.3,
+          "Não": 0.7
+        }
+      },
+      {
+        "id": "sifilis",
+        "states": [
+          "Sim",
+          "Não"
+        ],
+        "parents": [],
+        "cpt": {
+          "Sim": 0.07,
+          "Não": 0.93
+        }
+      },
+      {
+        "id": "hepatite",
+        "states": [
+          "Sim",
+          "Não"
+        ],
+        "parents": [],
+        "cpt": {
+          "Sim": 0.01,
+          "Não": 0.99
+        }
+      },
+      {
+        "id": "idade_entre_16_e_69",
+        "states": [
+          "Sim",
+          "Não"
+        ],
+        "parents": [],
+        "cpt": {
+          "Sim": 0.9,
+          "Não": 0.1
+        }
+      },
+      {
+        "id": "apto_para_doar",
+        "states": [
+          "Sim",
+          "Não"
+        ],
+        "parents": [
+          "nao_esta_doente",
+          "idade_entre_16_e_69"
+        ],
+        "cpt": [
+          {
+            "when": {
+              "idade_entre_16_e_69": "Sim",
+              "nao_esta_doente": "Sim"
+            },
+            "then": {
+              "Sim": 0.44505,
+              "Não": 0.55495
+            }
+          },
+          {
+            "when": {
+              "idade_entre_16_e_69": "Sim",
+              "nao_esta_doente": "Não"
+            },
+            "then": {
+              "Sim": 0.45495,
+              "Não": 0.54505
+            }
+          },
+          {
+            "when": {
+              "idade_entre_16_e_69": "Não",
+              "nao_esta_doente": "Sim"
+            },
+            "then": {
+              "Sim": 0.04945,
+              "Não": 0.95055
+            }
+          },
+          {
+            "when": {
+              "idade_entre_16_e_69": "Não",
+              "nao_esta_doente": "Não"
+            },
+            "then": {
+              "Sim": 0.05055,
+              "Não": 0.94945
+            }
+          }
+        ]
+      },
+      {
+        "id": "nao_esta_doente",
+        "states": [
+          "Sim",
+          "Não"
+        ],
+        "parents": [
+          "sifilis",
+          "anemia",
+          "hepatite"
+        ],
+        "cpt": [
+          {
+            "when": {
+              "sifilis": "Sim",
+              "anemia": "Sim",
+              "hepatite": "Sim"
+            },
+            "then": {
+              "Sim": 0.00021,
+              "Não": 0.99979
+            }
+          },
+          {
+            "when": {
+              "sifilis": "Não",
+              "anemia": "Sim",
+              "hepatite": "Sim"
+            },
+            "then": {
+              "Sim": 0.00279,
+              "Não": 0.99721
+            }
+          },
+          {
+            "when": {
+              "sifilis": "Sim",
+              "anemia": "Não",
+              "hepatite": "Sim"
+            },
+            "then": {
+              "Sim": 0.00049,
+              "Não": 0.99951
+            }
+          },
+          {
+            "when": {
+              "sifilis": "Não",
+              "anemia": "Não",
+              "hepatite": "Sim"
+            },
+            "then": {
+              "Sim": 0.00651,
+              "Não": 0.99349
+            }
+          },
+          {
+            "when": {
+              "sifilis": "Sim",
+              "anemia": "Sim",
+              "hepatite": "Não"
+            },
+            "then": {
+              "Sim": 0.02079,
+              "Não": 0.97921
+            }
+          },
+          {
+            "when": {
+              "sifilis": "Não",
+              "anemia": "Sim",
+              "hepatite": "Não"
+            },
+            "then": {
+              "Sim": 0.27621,
+              "Não": 0.72379
+            }
+          },
+          {
+            "when": {
+              "sifilis": "Sim",
+              "anemia": "Não",
+              "hepatite": "Não"
+            },
+            "then": {
+              "Sim": 0.04851,
+              "Não": 0.95149
+            }
+          },
+          {
+            "when": {
+              "sifilis": "Não",
+              "anemia": "Não",
+              "hepatite": "Não"
+            },
+            "then": {
+              "Sim": 0.64449,
+              "Não": 0.35551
+            }
+          }
+        ]
+      }
+    ],
+    "positions": {
+      "anemia": {
+        "x": 471,
+        "y": 47
+      },
+      "sifilis": {
+        "x": 262,
+        "y": 44
+      },
+      "hepatite": {
+        "x": 688,
+        "y": 50
+      },
+      "idade_entre_16_e_69": {
+        "x": 21,
+        "y": 53
+      },
+      "apto_para_doar": {
+        "x": 383,
+        "y": 415.5
+      },
+      "tipo_sangue_doador": {
+        "x": 60,
+        "y": 326
+      },
+      "nao_esta_doente": {
+        "x": 462.1111068725586,
+        "y": 234.90623474121094
+      },
+      "receptor_O+": {
+        "x": 289,
+        "y": 622
+      }
+    },
+    "subnetworks": [],
+    "linkages": {},
+    "inferenceEnabled": true,
+    "description": "calcula a probabilidade de uma doação de sangue ser bem sucedida."
+  },
+  "nodes": [
+    {
+      "id": "tipo_sangue_doador",
+      "states": [
+        "O+",
+        "O-",
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "AB+",
+        "AB-"
+      ],
+      "parents": [],
+      "cpt": {
+        "O+": 0.36,
+        "O-": 0.09,
+        "A+": 0.34,
+        "A-": 0.08,
+        "AB+": 0.025,
+        "B+": 0.08,
+        "B-": 0.02,
+        "AB-": 0.005
+      }
+    },
+    {
+      "id": "receptor_O+",
+      "states": [
+        "Sucesso",
+        "Fracasso"
+      ],
+      "parents": [
+        "tipo_sangue_doador",
+        "apto_para_doar"
+      ],
+      "cpt": [
+        {
+          "when": {
+            "apto_para_doar": "Sim",
+            "tipo_sangue_doador": "O+"
+          },
+          "then": {
+            "Sucesso": 1,
+            "Fracasso": 0
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Sim",
+            "tipo_sangue_doador": "O-"
+          },
+          "then": {
+            "Sucesso": 1,
+            "Fracasso": 0
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Sim",
+            "tipo_sangue_doador": "A+"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Sim",
+            "tipo_sangue_doador": "A-"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Sim",
+            "tipo_sangue_doador": "B+"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Sim",
+            "tipo_sangue_doador": "B-"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Sim",
+            "tipo_sangue_doador": "AB+"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Sim",
+            "tipo_sangue_doador": "AB-"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Não",
+            "tipo_sangue_doador": "O+"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Não",
+            "tipo_sangue_doador": "O-"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Não",
+            "tipo_sangue_doador": "A+"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Não",
+            "tipo_sangue_doador": "A-"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Não",
+            "tipo_sangue_doador": "B+"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Não",
+            "tipo_sangue_doador": "B-"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Não",
+            "tipo_sangue_doador": "AB+"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        },
+        {
+          "when": {
+            "apto_para_doar": "Não",
+            "tipo_sangue_doador": "AB-"
+          },
+          "then": {
+            "Sucesso": 0,
+            "Fracasso": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "anemia",
+      "states": [
+        "Sim",
+        "Não"
+      ],
+      "parents": [],
+      "cpt": {
+        "Sim": 0.3,
+        "Não": 0.7
+      }
+    },
+    {
+      "id": "sifilis",
+      "states": [
+        "Sim",
+        "Não"
+      ],
+      "parents": [],
+      "cpt": {
+        "Sim": 0.07,
+        "Não": 0.93
+      }
+    },
+    {
+      "id": "hepatite",
+      "states": [
+        "Sim",
+        "Não"
+      ],
+      "parents": [],
+      "cpt": {
+        "Sim": 0.01,
+        "Não": 0.99
+      }
+    },
+    {
+      "id": "idade_entre_16_e_69",
+      "states": [
+        "Sim",
+        "Não"
+      ],
+      "parents": [],
+      "cpt": {
+        "Sim": 0.9,
+        "Não": 0.1
+      }
+    },
+    {
+      "id": "apto_para_doar",
+      "states": [
+        "Sim",
+        "Não"
+      ],
+      "parents": [
+        "nao_esta_doente",
+        "idade_entre_16_e_69"
+      ],
+      "cpt": [
+        {
+          "when": {
+            "idade_entre_16_e_69": "Sim",
+            "nao_esta_doente": "Sim"
+          },
+          "then": {
+            "Sim": 0.44505,
+            "Não": 0.55495
+          }
+        },
+        {
+          "when": {
+            "idade_entre_16_e_69": "Sim",
+            "nao_esta_doente": "Não"
+          },
+          "then": {
+            "Sim": 0.45495,
+            "Não": 0.54505
+          }
+        },
+        {
+          "when": {
+            "idade_entre_16_e_69": "Não",
+            "nao_esta_doente": "Sim"
+          },
+          "then": {
+            "Sim": 0.04945,
+            "Não": 0.95055
+          }
+        },
+        {
+          "when": {
+            "idade_entre_16_e_69": "Não",
+            "nao_esta_doente": "Não"
+          },
+          "then": {
+            "Sim": 0.05055,
+            "Não": 0.94945
+          }
+        }
+      ]
+    },
+    {
+      "id": "nao_esta_doente",
+      "states": [
+        "Sim",
+        "Não"
+      ],
+      "parents": [
+        "sifilis",
+        "anemia",
+        "hepatite"
+      ],
+      "cpt": [
+        {
+          "when": {
+            "sifilis": "Sim",
+            "anemia": "Sim",
+            "hepatite": "Sim"
+          },
+          "then": {
+            "Sim": 0.00021,
+            "Não": 0.99979
+          }
+        },
+        {
+          "when": {
+            "sifilis": "Não",
+            "anemia": "Sim",
+            "hepatite": "Sim"
+          },
+          "then": {
+            "Sim": 0.00279,
+            "Não": 0.99721
+          }
+        },
+        {
+          "when": {
+            "sifilis": "Sim",
+            "anemia": "Não",
+            "hepatite": "Sim"
+          },
+          "then": {
+            "Sim": 0.00049,
+            "Não": 0.99951
+          }
+        },
+        {
+          "when": {
+            "sifilis": "Não",
+            "anemia": "Não",
+            "hepatite": "Sim"
+          },
+          "then": {
+            "Sim": 0.00651,
+            "Não": 0.99349
+          }
+        },
+        {
+          "when": {
+            "sifilis": "Sim",
+            "anemia": "Sim",
+            "hepatite": "Não"
+          },
+          "then": {
+            "Sim": 0.02079,
+            "Não": 0.97921
+          }
+        },
+        {
+          "when": {
+            "sifilis": "Não",
+            "anemia": "Sim",
+            "hepatite": "Não"
+          },
+          "then": {
+            "Sim": 0.27621,
+            "Não": 0.72379
+          }
+        },
+        {
+          "when": {
+            "sifilis": "Sim",
+            "anemia": "Não",
+            "hepatite": "Não"
+          },
+          "then": {
+            "Sim": 0.04851,
+            "Não": 0.95149
+          }
+        },
+        {
+          "when": {
+            "sifilis": "Não",
+            "anemia": "Não",
+            "hepatite": "Não"
+          },
+          "then": {
+            "Sim": 0.64449,
+            "Não": 0.35551
+          }
+        }
+      ]
+    }
+  ],
+  "positions": {
+    "anemia": {
+      "x": 471,
+      "y": 47
+    },
+    "sifilis": {
+      "x": 262,
+      "y": 44
+    },
+    "hepatite": {
+      "x": 688,
+      "y": 50
+    },
+    "idade_entre_16_e_69": {
+      "x": 21,
+      "y": 53
+    },
+    "apto_para_doar": {
+      "x": 383,
+      "y": 415.5
+    },
+    "tipo_sangue_doador": {
+      "x": 60,
+      "y": 326
+    },
+    "nao_esta_doente": {
+      "x": 462.1111068725586,
+      "y": 234.90623474121094
+    },
+    "receptor_O+": {
+      "x": 289,
+      "y": 622
+    }
+  }
+}
