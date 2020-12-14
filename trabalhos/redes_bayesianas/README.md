@@ -2,7 +2,6 @@
 
 #### Alunos
 - Bruno Aurélio Rôzza de Moura Campos (14104255)
-- Rafael de Oliveira Dura Escrich (14201120)
 
 #### Ferramenta Utilizada
 - [Editor de rede baysiana](https://nolleto.github.io/bayesjs-editor/)

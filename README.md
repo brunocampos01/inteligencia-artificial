@@ -1,5 +1,23 @@
 # Inteligência Artificial
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/83091b392a8e4d78891d2bdc1dd0d39a)](https://app.codacy.com/manual/brunocampos01/inteligencia-artificial?utm_source=github.com&utm_medium=referral&utm_content=brunocampos01/inteligencia-artificial&utm_campaign=Badge_Grade_Dashboard)
+![License](https://img.shields.io/badge/Code%20License-MIT-green.svg)
+![inteligencia_artificial](https://img.shields.io/badge/UFSC-Inteligência%20Artificial-green.svg)
+
+## Conteúdos
+- [Conceitos](conteudos/topico1-conceitos.pdf)
+- [Busca](conteudos/topico2-busca.pdf)
+  - [Resumo](#busca)
+- Representação do Conhecimento
+  - [Raciocício](conteudos/topico3-representacao_de_conhecimento_e_raciocinio.pdf)
+  - [Ontologia](conteudos/topico4-representacao_de_conhecimento_ontologias.pdf)
+  - [Web Semântica](conteudos/topico5-representacao_de_conhecimento_web_semantica.pdf)
+- Agentes
+  - [Sistemas Multiagentes](conteudos/topico6-agentes_e_sistemas_multiagentes.pdf)
+  - [Sistemas Multiagentes de Negociação](conteudos/topico8-sistemas_multiagentes_negociacao.pdf)
+  - [Sistemas Multiagentes de Cooperação](conteudos/topico9-sistemas_multiagentes_cooperacao.pdf)
+
+
+---
 
 ## Busca
 - Os métodos de busca são úteis para simplificar soluções.
@@ -29,7 +47,7 @@
 <br/>
 <br/>
 
-#### Algoritmo de Resolução
+### Algoritmo de Resolução
 Comece com 
 - 2 listas
 - solução a ser encontrada
@@ -139,7 +157,7 @@ if len(node.estado_atual) > 0:
 ```
 
 
-Largura
+### Largura
 
 <img src="img/Breadth-First-Search.gif" align="center" height=auto width=100%/>
 
@@ -147,7 +165,7 @@ Largura
 <br/>
 <br/>
 
-Profundidade
+### Profundidade
 <img src="img/Depth-First-Search.gif" align="center" height=auto width=100%/>
 
 ---
@@ -167,4 +185,3 @@ Bruno Aurélio Rôzza de Moura Campos
 
 #### Copyright
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br/>
-
