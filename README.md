@@ -1,6 +1,5 @@
 # Inteligência Artificial
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/83091b392a8e4d78891d2bdc1dd0d39a)](https://app.codacy.com/manual/brunocampos01/inteligencia-artificial?utm_source=github.com&utm_medium=referral&utm_content=brunocampos01/inteligencia-artificial&utm_campaign=Badge_Grade_Dashboard)
-![License](https://img.shields.io/badge/Code%20License-MIT-green.svg)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7ab7a7f3ce1b43c2942fb073d0b55e1b)](https://www.codacy.com/gh/brunocampos01/inteligencia-artificial/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=brunocampos01/inteligencia-artificial&amp;utm_campaign=Badge_Grade)![License](https://img.shields.io/badge/Code%20License-MIT-green.svg)
 ![inteligencia_artificial](https://img.shields.io/badge/UFSC-Inteligência%20Artificial-green.svg)
 
 ## Conteúdos
