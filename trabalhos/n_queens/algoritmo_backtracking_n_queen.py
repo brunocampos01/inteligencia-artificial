@@ -74,5 +74,4 @@ def main():
 
 
 if __name__ == "__main__":
-    # executa if script
     main()
