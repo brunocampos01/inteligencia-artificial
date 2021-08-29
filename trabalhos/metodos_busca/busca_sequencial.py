@@ -18,7 +18,6 @@ Sequential Search
 
 
 def busca_sequencial_for(lista, valor_procurado):
-    '''(list, float) -> bool'''
     for i in range(len(lista)):
         if lista[i] == valor_procurado:
             return True;
