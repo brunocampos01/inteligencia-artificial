@@ -18,7 +18,6 @@
 *.PDF  diff=astextplain
 *.rtf  diff=astextplain
 *.RTF  diff=astextplain
-*.roff diff=astextplain
 
 
 *.gitattributes text
@@ -121,6 +120,7 @@
 *.sql       linguist-language=sql
 *.PLpgSQL   linguist-language=sql
 
+*.3         linguist-language=text
 ###############################################################################
 # Vendored code 
 ###############################################################################
