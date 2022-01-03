@@ -18,6 +18,8 @@
 *.PDF  diff=astextplain
 *.rtf  diff=astextplain
 *.RTF  diff=astextplain
+*.roff diff=astextplain
+
 
 *.gitattributes text
 .gitignore      text
@@ -125,7 +127,6 @@
 # ignore files
 # *.ipynb linguist-vendored=true
 *.html linguist-vendored=true
-*.roff linguist-vendored=true
 
 # Apply override to all files in the directory
 # special-vendored-path/* linguist-vendored
