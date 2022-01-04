@@ -125,9 +125,10 @@
 ###############################################################################
 # ignore files
 # *.ipynb linguist-vendored=true
-*.html  linguist-vendored=true
+*.html      linguist-vendored=true
 
-*.3     linguist-vendored=true
+*.3         linguist-documentation
+*.1         linguist-documentation
 
 # Apply override to all files in the directory
 # special-vendored-path/* linguist-vendored
