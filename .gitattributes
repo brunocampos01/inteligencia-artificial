@@ -120,13 +120,14 @@
 *.sql       linguist-language=sql
 *.PLpgSQL   linguist-language=sql
 
-*.3         linguist-language=text
 ###############################################################################
 # Vendored code 
 ###############################################################################
 # ignore files
 # *.ipynb linguist-vendored=true
 *.html linguist-vendored=true
+
+*.3         linguist-documentation
 
 # Apply override to all files in the directory
 # special-vendored-path/* linguist-vendored
