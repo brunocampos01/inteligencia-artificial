@@ -50,7 +50,7 @@
 Comece com 
 - 2 listas
 - solução a ser encontrada
-- estados (nodos)
+- vértices (nodos)
 
 
 ```python
@@ -60,7 +60,7 @@ estado_inicial = 'a'
 estado_atual = None
 
 lista_nodos_visitados = []
-lista_nodos_abertos = []
+fila = [] # lista_nodos_abertos
 ```
 
 1. Pegue o nodo `estado_inicial`
@@ -70,43 +70,43 @@ solucao = 'n'
 estado_inicial = 'a'
 estado_atual = 'a'
 
-lista_nodos_abertos = ['a']
+fila = ['a']
 ```
 
-2. Verifique se é solução, se não for então remova da `lista_nodos_abertos` e adicione na `lista_nodos_visitados`
+2. Verifique se é solução, se não for então remova da `fila` e adicione na `lista_nodos_visitados`
 ```python
 estado_atual = 'a'
 
 lista_nodos_visitados = []
-lista_nodos_abertos = ['a']
+fila = ['a']
 
 
 if estado_atual is solucao:
     return True
 else:
-    lista_nodos_abertos.pop(estado_atual)
+    fila.pop(estado_atual)
     lista_nodos_visitados.append(estado_atual)
 
     # estado_atual = 'a'
     # lista_nodos_visitados = ['a']
-    # lista_nodos_abertos = []
+    # fila = []
 ```
 
-4. Verifique se o `estado_atual` tem filhos, se tiver adicione na `lista_nodos_abertos`
+4. Verifique se o `estado_atual` tem filhos, se tiver adicione na `fila`
 ```python
 estado_atual = 'a'
 
 lista_nodos_visitados = ['a']
-lista_nodos_abertos = []
+fila = []
 
 
 if len(node.estado_atual) > 0:
-    lista_nodos_abertos.append('b')
-    lista_nodos_abertos.append('c')
+    fila.append('b')
+    fila.append('c')
 
     # estado_atual = 'a'
     # lista_nodos_visitados = ['a']
-    # lista_nodos_abertos = ['b', 'c']
+    # fila = ['b', 'c']
 ```
 
 5. Pegue um novo nodo
@@ -116,43 +116,43 @@ estado_atual = 'b'
 
 **NOTA:** até aqui é tudo igual para os métodos de busca em largura e profundidade.
 
-6. Verifique se é solução, se não for então remova da `lista_nodos_abertos` e adicione na `lista_nodos_visitados`
+6. Verifique se é solução, se não for então remova da `fila` e adicione na `lista_nodos_visitados`
 ```python
 estado_atual = 'b'
 
 lista_nodos_visitados = ['a']
-lista_nodos_abertos = ['b', 'c']
+fila = ['b', 'c']
 
 if estado_atual is solucao:
     return True
 else:
-    lista_nodos_abertos.pop(estado_atual)
+    fila.pop(estado_atual)
     lista_nodos_visitados.append(estado_atual)
 ```
 
-7. Verifique se o `estado_atual` tem filhos, se tiver adicione na `lista_nodos_abertos`
+7. Verifique se o `estado_atual` tem filhos, se tiver adicione na `fila`
 ```python
 estado_atual = 'b'
 
 lista_nodos_visitados = ['a', 'b']
-lista_nodos_abertos = []
+fila = []
 
 
 if len(node.estado_atual) > 0:
     # largura FIFO
-    lista_nodos_abertos.insert(index=-1, 'd')
-    lista_nodos_abertos.insert(index=-1, 'e')
+    fila.insert(index=-1, 'd')
+    fila.insert(index=-1, 'e')
     # estado_atual = 'b'
     # lista_nodos_visitados = ['a', 'b']
-    # lista_nodos_abertos = ['c', "d", "e"] 
+    # fila = ['c', "d", "e"] 
 
 
     # profundidade LIFO
-    lista_nodos_abertos.insert(index=0, 'd')
-    lista_nodos_abertos.insert(index=0, 'e')
+    pilha.insert(index=0, 'd')
+    pilha.insert(index=0, 'e')
     # estado_atual = 'b'
     # lista_nodos_visitados = ['a', 'b']
-    # lista_nodos_abertos = ["d", "e", 'c'] 
+    # pilha = ["d", "e", 'c'] 
 ```
 
 
